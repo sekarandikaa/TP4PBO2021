@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <title>Daftar Buku Bacaan</title>
+  <style>
+  label {font-size: 20px;}
+  </style>
+</head>
+
+<body style="background:gainsboro;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><h2>Daftar Buku Bacaan Pribadi<h2></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+  <br />
+  <br />
+
+  <div style="margin-left: 5%">
+    <form action="index.php" method="POST">
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tjudul">Judul</label>
+          <input type="text" class="form-control" name="tjudul" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tpenulis">Penulis</label>
+          <input type="text" class="form-control" name="tpenulis" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="thalaman">Halaman</label>
+          <input type="text" class="form-control" name="thalaman" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="ttahun">Tahun Terbit</label>
+          <input type="text" class="form-control" name="ttahun" required />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="tgenre">Genre</label>
+          <div class="col-sm-10">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tgenre" id="tgenre1" value="Fiksi" />
+              <label class="form-check-label" for="tgenre1">Fiksi</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tgenre" id="tgenre2" value="Edukasi" />
+              <label class="form-check-label" for="tgenre2">Edukasi</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tgenre" id="tgenre3" value="Horror" />
+              <label class="form-check-label" for="tgenre3">Horror</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tgenre" id="tgenre4" value="Sejarah" />
+              <label class="form-check-label" for="tgenre4">Sejarah</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tgenre" id="tgenre4" value="Komedi" />
+              <label class="form-check-label" for="tgenre4">Komedi</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="tjenis">Jenis</label>
+          <div class="col-sm-10">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tjenis" id="tjenis1" value="Buku" />
+              <label class="form-check-label" for="tjenis1">Buku</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tjenis" id="tjenis2" value="Novel" />
+              <label class="form-check-label" for="tjenis2">Novel</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" name="add" class="btn btn-dark">Add Buku</button>
+    </form>
+    <br>
+    
+    <!-- Tabel 1 - Buku -->
+    <div style="display: inline-block; ">
+      <h4>Buku Bacaan</h4>
+      <!-- TABEL -->
+      <table class="table table-hover table-dark" align="left" border="1" style="text-align: center;">
+        <tr>
+          <td>No</td>
+          <td>Judul</td>
+          <td>Penulis</td>
+          <td>Halaman</td>
+          <td>Tahun Terbit</td>
+          <td>Genre</td>
+          <td>Jenis</td>
+          <td>Status</td>
+          <td>Aksi</td>
+        </tr>
+        <tr>
+          <!-- DATA YG AKAN DIGANTI -->
+          DATA_TABEL
+        </tr>
+
+      </table>
+    </div>
+
+    
+
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
